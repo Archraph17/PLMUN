@@ -3,143 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homepage</title>
-  <!-- Bootstrap CSS -->
+  <title>Home page</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <style>
-    /* Adjust sidebar width if needed */
-    body{
-        background-color: #7AA765;
-    }
-
-    .sidebar {
-      position: fixed;
-      top: 100;
-      right: -250px; /* Initially hidden on the right */
-      width: 200px;
-      height: 100%;
-      background-color: #29774D;
-      transition: right 0.3s ease-in-out;
-      z-index: 1000; /* Ensure sidebar is on top */
-    }
-
-    .sidebar.show {
-      right: 0; /* Show the sidebar on the right */
-    }
-
-    .navbar-toggler {
-      border: none; /* Remove border */
-      outline: none; /* Remove outline */
-      position: absolute; /* Position absolutely */
-      right: 10px; /* Adjust right spacing */
-      top: 50%; /* Align vertically */
-      transform: translateY(-50%);
-      z-index: 1001; /* Ensure sidebar is on top */
-    }
-
-
-    .navbar {
-      background-color: #29774D;
-      border: solid 1px #EFC900;
-      z-index: 1000; /* Ensure sidebar is on top */
-    }
-
-    .main-content-container {
-        margin-top: 50px;
-        border: 1px solid #EFC900; /* Border color */
-        border-radius: 10px;
-        background-color: #29774d25; /* Background color */
-        padding: 20px; /* Adjust padding as needed */
-        position: relative; /* Ensure z-index works */
-        z-index: 1; /* Set z-index to 1 */
-    }
-
-    .carousel-container {
-      margin-top: 50px;
-      position: relative; /* Ensure z-index works */
-      z-index: 1; /* Set z-index to 0 */
-    }
-
-  </style>
+  <link href="https://fonts.cdnfonts.com/css/inria-sans" rel="stylesheet">
+  <link rel="stylesheet" href="POFOS(Home).css">
 </head>
 <body>
-  <!-- Navbar -->
   <nav class="navbar navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Your Logo</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleSidebar()">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <a class="navbar-brand" href="POFOS(Home).html">
+      <img src="image.png" alt="PLMUN Logo">
+      <h1 class="logo-text" style="margin-left: 10px;"><b>PLMUN</b></h1>
+      <h5 class="food-stall" style="margin-left: 10px;">Food<br>Stall</h5>
+    </a>
+    <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleSidebar()" style="border: 1px solid #ccc;">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
     </div>
   </nav>
   
-  <!-- Sidebar -->
+  
+  
   <div class="sidebar" id="sidebar">
     <ul class="navbar-nav ml-3 mt-1">
       <li class="nav-item mt-1 active">
-        <a class="nav-link" href="#">Orders</span></a>
+        <a class="nav-link" href="POFOS(Orders).html">Orders</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Accounts</a>
+        <a class="nav-link" href="POFOS(Account).html">Accounts</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Order History</a>
+        <a class="nav-link" href="POFOS(OHistory).html">Order History</a>
       </li>
     </ul>
-  </div>
-  
- <!-- Main content container -->
-<div class="container-fluid">
-  <div class="row">
-    <!-- Main content container -->
-    <div class="col-md-7 main-content-container">
-      <!-- Main content -->
-      <div class="col-md-12 mt-1 main-content">
-        <h2>Hello StudentName</h2>
-        <p>This is where your main content will go. It will take up most of the page width.</p>
-      </div>
+    <div class="logout-container">
+      <a href="POFOS(Login).html" class="btn btn-outline-dark ml-3 w-75" onclick="logout()">Logout</a>
     </div>
+  </div>  
 
-    <!-- Carousel container -->
-    <div class="col-md-5 carousel-container">
-      <div class="mt-5">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="image1.jpg" class="d-block w-100" alt="Slide 1">
-            </div>
-            <div class="carousel-item">
-              <img src="image2.jpg" class="d-block w-100" alt="Slide 2">
-            </div>
-            <div class="carousel-item">
-              <img src="image3.jpg" class="d-block w-100" alt="Slide 3">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-md-6 mb-4">
+        <div class="main-container">
+          <div class="row">
+            <div class="col-md-auto main-content-container">
+              <div class="col-md-auto main-content">
+                <h2><strong>Welcome Student (Name)!</strong></h2>
+              </div>
+              <div class="col-md-auto paragraph-container">
+                <i>“Pick your store that you liked and we’ll serve what you deserve.”</i>
+              </div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
+      <div class="col-md-4 mt-5">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="2000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="Login.png" class="d-block w-100 carousel-img" alt="Advertisement">
+            </div>
+            <div class="carousel-item">
+              <img src="Login.png" class="d-block w-100 carousel-img" alt="Advertisement">
+            </div>
+            <div class="carousel-item">
+              <img src="Login.png" class="d-block w-100 carousel-img" alt="Advertisement">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>           
     </div>
   </div>
-</div>
+  
+  
+  
+  
+  
 
-  <!-- Bootstrap JS -->
+  <div class="store-container col-md-auto">
+    <h2 class="store mt-5" style="text-align: center;"><strong> Stores </strong></h2>
+    <div class="row mt-3">
+      <div class="col-md-4 mb-3">
+        <a href="POFOS(Menu).html?image=TasteTalkers.jpg" class="store-link"><img src="TasteTalkers.jpg" class="img-fluid img-button" alt="Image 1"></a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <a href="POFOS(Menu).html?image=Alfreshco.jpg" class="store-link"><img src="Alfreshco.jpg" class="img-fluid img-button" alt="Image 2"></a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <a href="POFOS(Menu).html?image=Cacera.jpg" class="store-link"><img src="Cacera.jpg" class="img-fluid img-button" alt="Image 3"></a>
+      </div>
+    </div>
+    <div class="row mt-1">
+      <div class="col-md-4 mb-3">
+        <a href="POFOS(Menu).html?image=Rd.jpg" class="store-link"><img src="Rd.jpg" class="img-fluid img-button" alt="Image 1"></a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <a href="POFOS(Menu).html?image=Tahoo.jpg" class="store-link"><img src="Tahoo.jpg" class="img-fluid img-button" alt="Image 2"></a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <a href="POFOS(Menu).html?image=Sabel.jpg" class="store-link"><img src="Sabel.jpg" class="img-fluid img-button" alt="Image 1"></a>
+      </div>
+    </div>
+    <div class="row mt-1">
+      <div class="col-md-4 mb-3">
+        <img src="SerChx.jpg" class="img-fluid img-button" alt="Image 1">
+      </div>
+      <div class="col-md-4 mb-3">
+        <img src="Kawani.jpg" class="img-fluid img-button" alt="Image 2">
+      </div>
+      <div class="col-md-4 mb-3">
+        <img src="Gastriquest.jpg" class="img-fluid img-button" alt="Image 3">
+      </div>
+      <div class="col-md-4 mb-3">
+        <img src="Gastriquest.jpg" class="img-fluid img-button" alt="Image 3">
+      </div>
+    </div>
+  </div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
   <script>
+    
     function toggleSidebar() {
       var sidebar = document.getElementById('sidebar');
       sidebar.classList.toggle('show');
@@ -154,6 +149,26 @@
       }
     });
 
+    document.addEventListener("DOMContentLoaded", function() {
+  var storeLinks = document.querySelectorAll(".store-link");
+
+  storeLinks.forEach(function(link) {
+    link.addEventListener("click", function(event) {
+
+      var imageSrc = this.getAttribute("href").split("=")[1];
+
+      window.location.href = this.href;
+    });
+  });
+});
+
+$(document).ready(function(){
+    // Trigger the carousel sliding animation
+    $('.carousel').carousel({
+      interval: 2000, // Set the interval in milliseconds
+      pause: false // Set to true if you want to pause on hover
+    });
+  });
   </script>
 </body>
 </html>

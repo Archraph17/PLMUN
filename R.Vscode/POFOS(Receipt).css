@@ -1,0 +1,76 @@
+body{
+    background-color: #7AA765;
+    font-family: 'Inria Sans', sans-serif;
+}
+
+.navbar {
+    background-color: #29774D;
+    border: solid 1px #EFC900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-brand img {
+  max-height: 10%;
+  max-width: 10%;
+}
+.receipt-container {
+  background-color: #ffff;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.order-number-container {
+text-align: center;
+font-size: 30px; /* Adjust font size as needed */
+}
+
+.status-container {
+  padding: 10px;
+  text-align: center;
+}
+
+.status-container .col-auto {
+  margin: 0 30px; /* Adjust the space between icons */
+}
+
+.icon-container {
+  position: relative;
+}
+
+.icon-container::before {
+  content: "";
+  position: absolute;
+  border-radius: 5px;
+  top: 40%;
+  left: calc(100% + 15px); /* Adjust the distance between icons */
+  height: 10px; /* Adjust the thickness of the line */
+  width: 30px; /* Adjust the length of the line */
+  background-color: rgb(36, 36, 36); /* Adjust the color of the line */
+  transform: translateY(-90%);
+  
+}
+
+.fa-solid{
+  stroke: #EFC900 solid 2px;
+}
+
+
+
+
+    /* Responsive adjustments for the navbar brand */
+    @media (max-width: 768px) {
+        .navbar-brand img {
+          max-height: 40px; /* Adjust for smaller screens */
+          max-width: 120px; /* Adjust for smaller screens */
+        }
+      }

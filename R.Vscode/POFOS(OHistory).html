@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order History page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/inria-sans" rel="stylesheet">
+  <link rel="stylesheet" href="POFOS(OHistory).css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a class="navbar-brand" href="POFOS(Home).html">
+      <img src="image.png" alt="PLMUN Logo">
+    </a>
+    <a class="back-button" style="color: black; text-decoration-line: none;" href="javascript:history.back()">Back</a>
+  </nav>
+
+  <h3 style="text-align: center; margin: 20px;">Order History</h3>
+
+  <div class="container">
+    <div class="row">
+      <!-- History container -->
+      <div class="col-md-7">
+        <!-- Container for order history -->
+        <div class="history-container">
+          <div class="history-card">
+            <div class="history-description" data-receipt-id="1">
+              <h7>Store Name:<br></h7>
+              <h7>Order No.<br></h7>
+              Click to view receipt >>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Receipt container -->
+      <div class="col-md-5">
+        <!-- Receipt Container -->
+        <div class="receipt-container" id="receiptContainer">
+          <h4 style="text-align: center;">Receipt</h4>
+          <!-- Customer Name -->
+          <div class="mb-1">
+            <strong>Name:</strong>
+            <span id="customerName"></span>
+          </div>
+          <!-- Date & Time -->
+          <div class="mb-1">
+            <strong>Date & Time:</strong>
+            <span id="dateTime"></span>
+          </div>
+          <!-- Store Name -->
+          <div class="mb-1">
+            <strong>Store:</strong>
+            <span id="storeName"></span>
+          </div>
+          <hr>
+          <!-- Orders -->
+          <div>
+            <strong>Orders</strong>
+            <ul id="orderList">
+              <li></li>
+            </ul>
+            <hr>
+            <h6>Total: <span id="totalAmount">Php 0</span></h6>
+          </div>
+          <div class="order-number-container md-auto">
+            <strong>Order Number:</strong><br>
+            <span id="orderNumber"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Event listener for description containers
+    document.querySelectorAll('.history-description').forEach(function(description) {
+      description.addEventListener('click', function() {
+        // Toggle the display of the receipt container when a description is clicked
+        document.getElementById('receiptContainer').style.display = 'block';
+      });
+    });
+  </script>
+  
+</body>
+</html>

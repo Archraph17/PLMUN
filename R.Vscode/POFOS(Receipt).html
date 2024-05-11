@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receipt page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/inria-sans" rel="stylesheet">
+  <link rel="stylesheet" href="POFOS(Receipt).css">
+</head>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a class="navbar-brand" href="POFOS(Home).html">
+      <img src="image.png" alt="PLMUN Logo">
+    </a>
+  </nav>
+
+  <div class="status-container justify-content-center mt-3">
+    <div class="row no-gutters justify-content-center">
+      <div class="col-auto text-center">
+        <div class="icon-container">
+          <i class="fa-solid fa-clock fa-2x"></i><br>Pending
+        </div>
+      </div>
+      <div class="col-auto text-center">
+        <div class="icon-container">
+          <i class="fa-solid fa-fire-flame-curved fa-2x"></i><br>Prepping
+        </div>
+      </div>
+      <div class="col-auto text-center">
+          <i class="fa-solid fa-circle-check fa-2x"></i><br>Serving
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+
+<!-- Receipt Container -->
+<div class="receipt-container mt-2">
+  <h4 style="text-align: center;">Receipt</h4>
+  <!-- Customer Name -->
+  <div class="mb-1">
+    <strong>Name:</strong>
+    <span id="customerName"></span>
+  </div>
+  <!-- Date & Time -->
+  <div class="mb-1">
+    <strong>Date & Time:</strong>
+    <span id="dateTime"></span>
+  </div>
+  <!-- Store Name -->
+  <div class="mb-1">
+    <strong>Store:</strong>
+    <span id="storeName"></span>
+  </div>
+  <hr>
+  <!-- Orders -->
+  <div>
+    <strong>Orders</strong>
+    <ul id="orderList">
+      <li></li>
+    </ul>
+    <hr>
+    <h6>Total: <span id="totalAmount">Php 0</span></h6>
+  </div>
+  <div class="order-number-container md-auto">
+    <strong>Order Number:</strong><br>
+    <span id="orderNumber"></span>
+  </div>
+</div>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+  // Function to update the date and time
+  function updateDateTime() {
+    var now = new Date();
+    var dateTimeElement = document.getElementById('dateTime');
+    // Format the date and time
+    var formattedDate = now.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' });
+    var formattedTime = now.toLocaleTimeString('en-US', { hour12: true, hour: '2-digit', minute: '2-digit' });
+    var formattedDateTime = formattedDate + ' ' + formattedTime;
+    // Update the content of the span element
+    dateTimeElement.textContent = formattedDateTime;
+  }
+    // Call the function initially to display the current date and time
+    updateDateTime();
+
+
+    function populateReceipt() {
+    var orderList = document.getElementById('orderList');
+    var cartOrders = localStorage.getItem('cartOrders');
+    if (cartOrders) {
+        // Parse the JSON string back into an array of objects
+        var ordersArray = JSON.parse(cartOrders);
+
+        // Clear the order list before populating it again
+        orderList.innerHTML = '';
+
+        // Iterate over the array to create list items for each order
+        ordersArray.forEach(function(order) {
+            var listItem = document.createElement('li');
+            listItem.textContent = order.quantity + 'x ' + order.foodName + ' - ' + order.price;
+            orderList.appendChild(listItem);
+        });
+    }
+}
+
+    // Update receipt content when the page loads
+    window.onload = function() {
+        populateReceipt();
+    };
+    
+    
+
+    // Function to retrieve query parameters from the URL
+function getQueryParameter(name) {
+    var urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
+
+// Get the total amount query parameter from the URL
+var totalAmountParam = getQueryParameter('totalAmount');
+
+// Update the total amount if the parameter is provided
+if (totalAmountParam) {
+    var totalAmountElement = document.getElementById('totalAmount');
+    totalAmountElement.textContent = 'Php ' + parseFloat(totalAmountParam).toFixed(2);
+}
+
+
+  // Function to generate and display the order number
+  function generateOrderNumber() {
+    var orderNumberElement = document.getElementById('orderNumber');
+    // Generate a random order number between 10 and 999 (2 or 3 digits)
+    var orderNumber = Math.floor(Math.random() * 500) + 10; // Random number between 10 and 999
+    // Update the content of the span element
+    orderNumberElement.textContent = orderNumber;
+  }
+
+  // Call the function initially to generate and display the order number
+  generateOrderNumber();
+
+  
+
+</script>
+</body>
+</html>

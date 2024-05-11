@@ -1,0 +1,150 @@
+    body{
+        background-color: #7AA765;
+        font-family: 'Inria Sans', sans-serif;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 200px;
+      height: 100%;
+      border: #EFC900 solid 1px;
+      background: linear-gradient(#29774D 0%, #7AA765 100%);
+      transition: right 0.3s ease-in-out;
+      z-index: 1000;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logout-container {
+      margin-top: auto;
+      margin-bottom: 20px;
+    }
+
+    .btn-outline-dark {
+      color: #000;
+      background-color: transparent; 
+      border-color: #000; 
+    }
+    
+    .btn-outline-dark:hover {
+      color: #fff;
+      background-color: #000;
+    }
+    
+    
+
+    .navbar-brand img {
+    max-height: 10%;
+    max-width: 10%;
+  }
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-text {
+    margin-left: 10px;
+    color: black;
+  }
+
+  .food-stall {
+    margin-left: 5px;
+    font-size: 0.8em;
+    color: black;
+  }
+
+
+    .sidebar.show {
+      right: 0;
+    }
+
+    .navbar-toggler {
+      border: 3px solid white;
+      outline: none;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+
+    .navbar {
+      background-color: #29774D;
+      border: inset 1px #EFC900;
+      z-index: 1000;
+    }
+
+    .main-container {
+      position: relative; 
+      z-index: 1; 
+      transition: filter 0.3s ease-in-out;
+    }
+    
+    .blurred {
+      filter: blur(5px);
+    }
+
+    .main-content-container {
+        margin-top: 50px;
+        border: 2px outset #EFC900;
+        border-radius: 10px;
+        background-color: #29774d25;
+        padding: 20px;
+        position: relative;
+        z-index: 1;
+        transition: filter 0.3s ease-in-out;
+    }
+
+    .carousel-container {
+      margin-top: 50px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .carousel-container {
+      width: 100%;
+    }
+    
+    .carousel-inner {
+      width: 100%;
+    }
+    
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+    }
+
+    .carousel-img {
+      border-radius: 10px;
+      border: black 2px outset;
+    }
+    
+
+    .img-button {
+      margin: 0 auto;
+      border: #29774D solid 2px;
+      border-radius: 5px;
+      width: 80%;
+      display: block;
+      box-shadow: 0 4px 0px rgba(0, 0, 0, 0.534); /* Add shadow */
+    }
+    
+
+.img-button:hover {
+border: #EFC900 solid 2px;
+transform: translateY(4%); 
+border-radius: 5px;
+box-shadow: 0 0px 0px rgba(0, 0, 0, 0.534); /* Add shadow */
+
+}
+
+a {
+  color:black;
+}
+
+a:hover{
+  color: black;
+}

@@ -1,0 +1,84 @@
+body {
+    background-color: #7AA765;
+    font-family: 'Inria Sans', sans-serif;
+  }
+
+  .navbar {
+    background-color: #29774D;
+    border: solid 1px #EFC900;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar-brand {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-brand img {
+    max-height: 10%;
+    max-width: 10%;
+  }
+
+  .back-button {
+    color: black;
+    background-color: #7AA765;
+    height: auto;
+    width: auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .history-card {
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .history-description {
+      padding: 10px;
+    font-weight: bold;
+    background-color: #ccc;
+    border-radius: 3px;
+    border-bottom: #000000 solid 1px;
+  }
+
+  .history-description:hover {
+    background-color: #7aa76593;
+  }
+
+  .receipt-container {
+    background-color: #ffffff;
+    max-width: auto;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(0%);
+    display: none;
+  }
+  .order-number-container {
+text-align: center;
+font-size: 30px;
+}
+
+  .history-container {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #ffffff; 
+    position: relative 
+  }
+
+  @media (max-width: 768px) {
+    .navbar-brand img {
+      max-height: 40px;
+      max-width: 120px;
+    }
+  }

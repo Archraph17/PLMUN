@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/inria-sans" rel="stylesheet">
+  <link rel="stylesheet" href="POFOS(Menu).css">
+  </head>
+  
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <!-- Box in the middle of the navbar -->
+        <button class="btn"><a href="POFOS(Home).html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-arrow-left" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 0-.707 0l-6 6a.5.5 0 0 0 0 .708l6 6a.5.5 0 0 0 .708-.708L3.707 8l5.647-5.646a.5.5 0 0 0 0-.708z"/>
+              </svg> 
+        </button></a>
+        <div class="box-container">
+            <!-- Display clicked image here -->
+            <img src="" id="clicked-image" class="img-fluid" alt="Clicked Image">
+          </div>          
+      </div>
+    </nav>
+
+    <div class="main-container mt-5 ml-5 mr-5">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Menu container -->
+                <div class="col-md-auto mb-2 menu-container">
+                    <!-- Move the menu div inside the menu-container -->
+                    <div class="menu">
+                        <div class="row">
+                            <div class="col-auto">
+                                <button class="menu-button" onclick="showMenu('meal')" autofocus>Meal</button>
+                              </div>
+                              <div class="col-auto">
+                                <button class="menu-button" onclick="showMenu('drinks')">Drinks</button>
+                              </div>
+                              <div class="col-auto">
+                                <button class="menu-button" onclick="showMenu('snacks')">Snacks</button>
+                              </div>
+                              <div class="col-auto col-md-3">
+                                <button class="menu-button" onclick="showMenu('dessert')">Dessert</button>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="container-fluid">
+                <div class="row">         
+                    <!-- Menu content -->
+                    <div class="col-md-8 menu-content">
+                        <h2 style="text-align: center;">Menu</h2>
+                        <!-- Menu items -->
+                        <div class="menu-item meal">
+                            <div class="row">
+                                <div class="col-md-auto">
+                                    <div class="food">
+                                        <img src="burger1.jpg" width="150px" height="100px">
+                                        <h6>Rice n Cornbeef w/Egg</h6>
+                                        <h6>Php 50</h6>
+                                        <button class="ordernow">Select</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-auto">
+                                    <div class="food">
+                                        <img src="burger1.jpg" width="150px" height="100px">
+                                        <h6>Rice n Hotdog w/Egg</h6>
+                                        <h6>Php 50</h6>
+                                        <button class="ordernow">Select</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-auto">
+                                    <div class="food">
+                                        <img src="burger1.jpg" width="150px" height="100px">
+                                        <h6>Rice n Porkchop w/Egg</h6>
+                                        <h6>Php 50</h6>
+                                        <button class="ordernow">Select</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-auto">
+                                    <div class="food">
+                                        <img src="burger1.jpg" width="150px" height="100px">
+                                        <h6>Rice n Porkchop w/Egg</h6>
+                                        <h6>Php 50</h6>
+                                        <button class="ordernow">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item drinks">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="food">
+                                        <img src="burger1.jpg" width="150px" height="100px">
+                                        <h6>Mismo Coca Cola</h6>
+                                        <h6>Php 20</h6>
+                                        <button class="ordernow">Select</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="food">
+                                        <img src="burger1.jpg" width="150px" height="100px">
+                                        <h6>Mismo Sprite</h6>
+                                        <h6>Php 20</h6>
+                                        <button class="ordernow">Select</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="food">
+                                        <img src="burger1.jpg" width="150px" height="100px">
+                                        <h6>Mismo Royal</h6>
+                                        <h6>Php 20</h6>
+                                        <button class="ordernow">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item snacks">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="food">
+                                        <img src="burger1.jpg" width="150px" height="100px">
+                                        <h6>Piatos</h6>
+                                        <h6>Php 15</h6>
+                                        <button class="ordernow">Select</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="food">
+                                        <img src="burger1.jpg" width="150px" height="100px">
+                                        <h6>Tomi</h6>
+                                        <h6>Php 8</h6>
+                                        <button class="ordernow">Select</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="food">
+                                        <img src="burger1.jpg" width="150px" height="100px">
+                                        <h6>Nova</h6>
+                                        <h6>Php 15</h6>
+                                        <button class="ordernow">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item dessert">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="food">
+                                        <img src="burger1.jpg" width="150px" height="100px">
+                                        <h6>Shake</h6>
+                                        <h6>Php 30</h6>
+                                        <button class="ordernow">Select</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="food">
+                                        <img src="burger1.jpg" width="150px" height="100px">
+                                        <h6>Ice Cream</h6>
+                                        <h6>Php 30</h6>
+                                        <button class="ordernow">Select</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="food">
+                                        <img src="burger1.jpg" width="150px" height="100px">
+                                        <h6></h6>
+                                        <h6>Php 50</h6>
+                                        <button class="ordernow">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col ml-auto">
+                        <div class="cart-container">
+                            <div class="cart-card">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="cart-item">Order Details</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cart-item">Quantity</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cart-item">Price</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-order"></div>
+                            <hr class="line">
+                            <div class="container d-flex justify-content-between">
+                                <h6>Total: <span id="totalAmount">Php 0</span></h6>
+                                <div class="form-group">
+                                    <label for="amount" class="form-label">Cash Amount:</label>
+                                    <input type="text" class="form-control" style="max-width: 50%;" placeholder="Php" id="amount">
+                                </div>
+                            </div>
+                            <div class="container mb-2 d-flex justify-content-end align-items-center">
+                                <button class="btn mr-2" id="addToCartBtn" disabled><a href="POFOS(Orders).html" style="color: black; text-decoration: none;">Add to Cart</a></button>
+                                <button class="btn" id="checkoutBtn" disabled><a href="POFOS(Receipt).html" style="color: black; text-decoration: none;">Checkout</a></button>
+                            </div>                        
+                        </div>
+                    </div>
+            </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+  // Get the query parameter for the image
+  var urlParams = new URLSearchParams(window.location.search);
+  var imageSrc = urlParams.get('image');
+
+  // Set the clicked image in the box-container
+  var clickedImage = document.getElementById("clicked-image");
+  if (imageSrc) {
+    clickedImage.src = imageSrc;
+  } else {
+    clickedImage.style.display = "none"; // Hide the container if no image is provided
+  }
+});
+
+
+        // Hide all menu items except for the specified type
+        function showMenu(menuType) {
+            var menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(function(item) {
+                item.style.display = 'none';
+            });
+
+            var selectedMenuItems = document.querySelectorAll('.menu-item.' + menuType);
+            selectedMenuItems.forEach(function(item) {
+                item.style.display = 'block';
+            });
+        }
+
+        // Show only the 'meal' menu items initially
+        window.onload = function() {
+            showMenu('meal');
+        };
+
+// Function to handle when a food item is selected
+function selectFood(foodName, foodPrice) {
+    var cartItems = document.querySelectorAll('.cart-row span:first-child');
+    var cartItemExists = false;
+    // Check if the item already exists in the cart
+    cartItems.forEach(function(item) {
+        if (item.innerText === foodName) {
+            cartItemExists = true;
+            var quantityElement = item.nextElementSibling;
+            var totalPriceElement = quantityElement.nextElementSibling;
+            var currentQuantity = parseInt(quantityElement.innerText);
+            var currentTotalPrice = parseFloat(totalPriceElement.innerText.replace('Php ', ''));
+
+            // Increment the quantity
+            quantityElement.innerText = currentQuantity + 1;
+            // Update the total price
+            totalPriceElement.innerText = 'Php ' + (currentTotalPrice + parseFloat(foodPrice.replace('Php ', '')));
+        }
+    });
+
+    // If the item doesn't exist in the cart, add it
+    if (!cartItemExists) {
+        // Create a new cart item element
+        var cartItem = document.createElement('div');
+        cartItem.classList.add('cart-row');
+        cartItem.innerHTML = `
+            <span class="cart-text">${foodName}</span>
+            <span class="cart-text">1</span> <!-- Initial quantity is 1 -->
+            <span class="cart-text">${foodPrice}</span>
+            <span class="remove-item">&times;</span>
+        `;
+
+        // Append the cart item to the cart container
+        var cartContainer = document.querySelector('.cart-order');
+        cartContainer.appendChild(cartItem);
+    }
+
+    // Update the total amount displayed
+    updateTotal();
+}
+
+
+// Event listener for all 'Select' buttons
+var selectButtons = document.querySelectorAll('.ordernow');
+selectButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        var foodName = button.parentNode.querySelector('h6').innerText;
+        var foodPrice = button.parentNode.querySelector('h6:nth-of-type(2)').innerText;
+        selectFood(foodName, foodPrice);
+    });
+});
+
+// Event listener for removing items from the cart
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('remove-item')) {
+        event.target.parentElement.remove();
+        // Update the total amount displayed
+        updateTotal();
+    }
+});
+
+// Function to calculate the total from the cart
+function calculateTotal() {
+    var total = 0;
+    var cartItems = document.querySelectorAll('.cart-row');
+    cartItems.forEach(function(item) {
+        var totalprice = parseFloat(item.querySelector('.cart-text:nth-child(3)').innerText.replace('Php ', ''));
+        total += totalprice
+    });
+    return total.toFixed(2);
+}
+
+
+
+// Function to update the total amount displayed
+function updateTotal() {
+    var totalAmount = document.getElementById('totalAmount');
+    totalAmount.textContent = 'Php ' + calculateTotal();
+}
+
+// Event listener for input change in cash amount
+var cashAmountInput = document.getElementById('amount');
+cashAmountInput.addEventListener('input', function() {
+    updateTotal();
+});
+
+// Initial update of total
+updateTotal();
+
+// Event listener for input change in cash amount
+var cashAmountInput = document.getElementById('amount');
+cashAmountInput.addEventListener('input', function() {
+    var cashAmount = parseFloat(cashAmountInput.value);
+    var totalAmount = parseFloat(document.getElementById('totalAmount').innerText.replace('Php ', ''));
+
+    var addToCartBtn = document.getElementById('addToCartBtn');
+    var checkoutBtn = document.getElementById('checkoutBtn');
+
+    if (!isNaN(cashAmount) && cashAmount >= totalAmount) {
+        addToCartBtn.disabled = false;
+        checkoutBtn.disabled = false;
+    } else {
+        addToCartBtn.disabled = true;
+        checkoutBtn.disabled = true;
+    }
+});
+
+// Get the parent form element of the buttons
+var addToCartForm = document.getElementById('addToCartBtn');
+var checkoutForm = document.getElementById('checkoutBtn');
+
+// Event listener for the "Add to Cart" button
+addToCartForm.addEventListener('submit', function(event) {
+    if (addToCartBtn.disabled) {
+        event.preventDefault(); // Prevent the default behavior of the form
+    }
+});
+
+// Event listener for the "Checkout" button
+checkoutForm.addEventListener('submit', function(event) {
+    if (checkoutBtn.disabled) {
+        event.preventDefault(); // Prevent the default behavior of the form
+    }
+});
+
+
+var checkoutBtn = document.getElementById('checkoutBtn');
+checkoutBtn.addEventListener('click', function(event) {
+    if (!checkoutBtn.disabled) {
+        // Retrieve cart orders
+        var cartItems = document.querySelectorAll('.cart-row');
+        var receiptData = [];
+
+        // Loop through each cart item to extract food name, quantity, and price
+        cartItems.forEach(function(cartItem) {
+            var foodName = cartItem.querySelector('.cart-text:first-child').innerText;
+            var quantity = cartItem.querySelector('.cart-text:nth-child(2)').innerText;
+            var price = cartItem.querySelector('.cart-text:nth-child(3)').innerText;
+            receiptData.push({ foodName: foodName, quantity: quantity, price: price });
+        });
+
+        // Store cart orders in local storage
+        localStorage.setItem('cartOrders', JSON.stringify(receiptData));
+        // Redirect to the receipt page
+        window.location.href = "POFOS(Receipt).html";
+    } else {
+        event.preventDefault(); // Prevent the default behavior of the button if disabled
+    }
+});
+
+
+
+    </script>
+    
+
+</body>
+</html>
