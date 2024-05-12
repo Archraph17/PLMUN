@@ -108,6 +108,12 @@
   .cart-order{
     margin: 5px;
   }
+
+  .remove-item {
+    cursor: pointer;
+    color: red;
+}
+
   
       .line {
       width: 100%;
