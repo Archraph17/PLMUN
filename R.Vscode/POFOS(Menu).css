@@ -35,20 +35,34 @@
         background-color: #f8f9fa;
       }
       
-      .menu-container{
-          border: black solid 1px;
-          padding: 5px;
-          border-radius: 5px;
-          background-color: #29774d3a;
-          max-width: 100%;
-      }
   
       .menu-content{
           border: black solid 1px;
           padding: 5px;
           border-radius: 5px;
           background-color: #29774d3a;
+          max-height: 600px; /* Adjust the max-height as needed */
+          overflow-y: auto; /* Enable vertical scrollbar */
+          scrollbar-width: thin; /* Custom scrollbar for Firefox */
       }
+
+      .menu-content::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+    }
+
+    .menu-content::-webkit-scrollbar-track {
+        background: transparent; /* Track color */
+    }
+
+    .menu-content::-webkit-scrollbar-thumb {
+        background-color: #888; /* Thumb color */
+        border-radius: 4px; /* Rounded corners */
+    }
+
+    .menu-item {
+      max-height: 360px;
+        margin-bottom: 10px; /* Margin between menu items */
+    }
   
       .menu {
       display: flex;
@@ -57,6 +71,7 @@
       }
   
       .menu-button {
+        width: 100%; /* Set the width of the button */
       border: none;
       border-radius: 5px;
       background-color:#29774D;
@@ -120,7 +135,7 @@
       border: none;
       border-radius: 50px;
       background-color:#29774D;
-      width: 50%;
+      width: 70%;
       }
 
       .food{
@@ -129,7 +144,7 @@
         padding: 10px;
         border: 1px solid black; /* Border color */
         border-radius: 5px;
-        background-color: #ffffff; /* Background color */
+        background-color: #ffffff70; /* Background color */
         position: relative; /* Ensure z-index works */
       }
 
