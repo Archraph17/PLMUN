@@ -1,0 +1,163 @@
+body {
+    background-color: #7AA765;
+    font-family: 'Inria Sans', sans-serif;
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-text {
+    margin-left: 10px;
+    color: black;
+  }
+
+  .food-stall {
+    margin-left: 5px;
+    font-size: 13px;
+    color: black;
+  }
+
+  .navbar {
+    background-color: #29774D;
+    border: solid 1px #EFC900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-fluid {
+    width: 280px; 
+    height: 44px;
+    border: rgba(0, 0, 0, 0.5) solid 2px;
+    border-radius: 10px; 
+    background-color: #f8f9fa;
+  }
+  
+
+  .menu-content{
+      border: black solid 1px;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: #29774d3a;
+      max-height: 600px; /* Adjust the max-height as needed */
+      overflow-y: auto; /* Enable vertical scrollbar */
+      scrollbar-width: thin; /* Custom scrollbar for Firefox */
+  }
+
+  .menu-content::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.menu-content::-webkit-scrollbar-track {
+    background: transparent; /* Track color */
+}
+
+.menu-content::-webkit-scrollbar-thumb {
+    background-color: #888; /* Thumb color */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.menu-item {
+  max-height: 360px;
+    margin-bottom: 10px; /* Margin between menu items */
+}
+
+  .menu {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center; /* Center the buttons vertically */
+  }
+
+  .menu-button {
+  border: none;
+  border-radius: 5px;
+  background-color:#29774D;
+  }
+
+  .status-container{
+    height: auto;
+    border: #000000 solid 1px;
+    border-radius: 10px;
+    background-color: white;
+  }
+
+  .cart-container{
+    padding: 10px;
+      border: 1px solid black; /* Border color */
+      border-radius: 10px;
+      background-color: #ffffff8e; /* Background color */
+      position: relative; /* Ensure z-index works */
+  }
+  .cart-card {
+  background-color: #0B8B57;
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+  border: 2px solid black; /* Border color */
+}
+
+.container{
+  padding: 5px;
+  border-top: #000000 solid 1px;
+}
+.cart-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px; /* Add spacing between rows */
+}
+
+.cart-item{
+margin: 5px auto;  
+text-align: center;
+}
+
+.cart-order{
+margin: 5px;
+}
+
+.remove-item {
+cursor: pointer;
+color: red;
+}
+
+
+  .line {
+  width: 100%;
+  height: 10px;
+  border-top: none;
+  border-bottom: 1px solid #EFC900;
+  background-color: transparent;
+  border-radius: 0 0 20px 20px;
+}
+.container {
+    align-items: center;
+}
+.btn {
+    width: auto;
+    background: #29774D;
+    border: black solid 1px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: black;
+    font-size: 15px;
+    }
+
+.ordernow{
+  border: none;
+  border-radius: 50px;
+  background-color:#29774D;
+  width: 70%;
+  }
+
+  .food{
+    max-width: fit-content;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid black; /* Border color */
+    border-radius: 5px;
+    background-color: #ffffff70; /* Background color */
+    position: relative; /* Ensure z-index works */
+  }
+
